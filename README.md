@@ -1,4 +1,4 @@
-# GitHub Refs — reusable UI / motion / design libraries
+# Vibecoder Skills — reusable UI / motion / design / code-quality resources
 
 A personal catalog of external libraries, component collections, and agent skills to pull from across projects. Curated by Cliff.
 
@@ -58,6 +58,20 @@ Last updated: 2026-09-24
 - **Best used for:** Consistent, accessible loading states across React apps. Live previews at loading.dev.
 - **How to pull in:** `npm install loading-dev`.
 
+### KokonutUI
+- **Link:** https://kokonutui.com/
+- **Type:** Component library site (React/Tailwind, open source)
+- **What it is:** 100+ open-source React components designed to be consumed by coding agents (agent-friendly copy-paste).
+- **Best used for:** General React/Tailwind building blocks in agent workflows — an alternative/complement to shadcn-animated and Kobra.
+- **How to pull in:** Copy from the site.
+
+### toggles.dev
+- **Link:** https://toggles.dev/
+- **Type:** Component snippets (theme toggles)
+- **What it is:** A collection of beautiful animated theme (light/dark) toggle icons.
+- **Best used for:** Dropping a polished dark-mode toggle into any app instead of a plain switch.
+- **How to pull in:** Copy the snippet.
+
 ---
 
 ## 3. Design & UI Agent Skills
@@ -87,6 +101,14 @@ Last updated: 2026-09-24
 - **What it is:** Detects and removes 20+ AI writing patterns ("It's not X. It's Y.", "What nobody tells you is…", weasel attribution, corporate jargon) while preserving authentic voice. Edit mode, detect-only mode, and a satire generator. 24 distinct slop categories.
 - **Best used for:** Cleaning AI-assisted copy — decks, brochures, UI microcopy, emails — so it reads human. Pairs with the `stop-slop` / `no-ai-slop` writing skills.
 - **How to pull in:** `npx` install as a ChatGPT/Claude Code skill.
+
+### uizze.sh
+- **Link:** https://uizze.sh/
+- **Type:** Agent skill (UI taste)
+- **Slop type:** Visual / UI design
+- **What it is:** A free "UI taste" skill that stops coding agents shipping AI slop — encodes design judgment so agent-built UI looks intentional.
+- **Best used for:** A drop-in taste layer for any agent-built UI. Overlaps the installed `unslop-ui` and emilkowalski taste skills — pick one primary to avoid conflicting rules.
+- **How to pull in:** Install the skill from uizze.sh.
 
 ### open-design — anti-ai-slop.md
 - **Link:** https://github.com/nexu-io/open-design/blob/main/craft/anti-ai-slop.md
@@ -121,6 +143,19 @@ Last updated: 2026-09-24
   - **List 2 — specific purposes:** web-design-guidelines (Vercel Labs), minimalist-ui, caveman (token-saving compressed mode), brandkit (brand-kit image gen), claude-handoff, critique (design critique), firecrawl-search, seo-audit, ai-seo (all on skills.sh).
 - **Best used for:** A shortlist of vetted UI/design/SEO skills to evaluate. Note overlap with what's already installed (apple-design / emil-design-eng ≈ emilkowalski/skills; shadcn; design-review).
 - **How to pull in:** Install individual skills from ui-skills.com / skills.sh as needed.
+
+### csaba_kissi — anti-slop UI toolkit (X thread)
+- **Link:** https://x.com/csaba_kissi/status/2103015949058400497
+- **Type:** Curated resource list (reference)
+- **What it is:** 5 picks — **uizze.sh** (UI taste anti-slop skill), **reactbits.dev** (already catalogued as React Bits), **kokonutui.com** (100+ agent-ready React components), **toggles.dev** (theme toggle icons), **obra/superpowers** (repeatable agent dev workflow). All five are catalogued individually above.
+- **Best used for:** Source thread; the individual entries are the actionable version.
+
+### DevDsgn — 5 design skills (X thread)
+- **Link:** https://x.com/DevDsgn/status/2103043406549364891
+- **Type:** Curated skill list (reference)
+- **What it is:** 5 design skills — Anthropic Frontend Design (`anthropics/skills`), UI/UX Pro Max (`nextlevelbuild…`), Taste Skill (`Leonxlnx/taste`), Impeccable (`pbakaus/impeccable`), Designer Skills (`Owl-Listener/…`).
+- **Best used for:** More UI-taste skills to evaluate. Heavy overlap with what's installed and with the kail_designs lists (Anthropic Frontend Design ≈ frontend-design; Taste ≈ minimalist-ui/brandkit source; Impeccable ≈ critique). Treat as candidates, install at most one taste skill to avoid conflicting rules.
+- **How to pull in:** Install individual skills from their repos.
 
 ---
 
@@ -170,6 +205,24 @@ De-slopping *code* (not copy or visuals) and keeping AI-assisted codebases maint
 - **Best used for:** The moment a prototype "kind of works" and needs to become maintainable.
 - **How to pull in:** Install the skill from the repo.
 
+### obra/superpowers
+- **Link:** https://github.com/obra/superpowers
+- **Type:** Agent skill collection
+- **What it is:** Open-source skills that give coding agents a repeatable dev workflow (rather than improvising each session).
+- **Best used for:** Standardizing how an agent plans, edits, and verifies across a project.
+- **How to pull in:** Install per the repo README.
+
+---
+
+## 7. Specialized Skills
+
+### before-skills — ASO (App Store Optimization)
+- **Link:** https://github.com/alexszczurek/before-skills
+- **Type:** Agent skill
+- **What it is:** An ASO skill for writing and auditing iOS App Store listings — names, subtitles, keyword fields, screenshots, localization, featuring. Follows a fixed 6-step keyword process instead of guessing; rules carry their reasoning and are marked Apple-confirmed vs industry-inferred; reflects 2025–2026 App Store guidelines.
+- **Best used for:** Any iOS app listing (e.g. if OnIt or a future app ships to the App Store).
+- **How to pull in:** `npx skills add alexszczurek/before-skills`.
+
 ---
 
 ## Quick pick guide
@@ -192,4 +245,9 @@ De-slopping *code* (not copy or visuals) and keeping AI-assisted codebases maint
 | Quick pre-PR code cleanup pass | vibe code cleanup (andyfischer gist) |
 | Guardrails so the agent writes prod code | Vibecodex |
 | Take a prototype to production | karpathy vibe-to-agentic |
-| Discover more Claude skills | awesome-claude-skills, ui-skills.com, skills.sh, kail_designs lists |
+| Repeatable agent dev workflow | obra/superpowers |
+| More agent-ready React components | KokonutUI |
+| Dark-mode toggle icon | toggles.dev |
+| Stop agent shipping UI slop | uizze.sh |
+| iOS App Store listing (ASO) | before-skills |
+| Discover more Claude skills | awesome-claude-skills, ui-skills.com, skills.sh, kail_designs / csaba_kissi / DevDsgn lists |
