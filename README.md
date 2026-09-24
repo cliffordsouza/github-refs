@@ -124,6 +124,54 @@ Last updated: 2026-09-24
 
 ---
 
+## 6. Code Quality & Vibe-Coding Discipline
+
+De-slopping *code* (not copy or visuals) and keeping AI-assisted codebases maintainable. Two flavours: **analyzers/cleaners** that find and fix debt, and **rulesets** that prevent it up front.
+
+### debtmap
+- **Link:** https://github.com/iepathos/debtmap
+- **Type:** CLI analyzer (Rust)
+- **What it is:** A technical-debt analyzer that scores and ranks bug hotspots across complexity, test-coverage gaps, git-history churn, coupling, and code purity. Languages: Rust, Python, JS, TS, Go, Solidity. Outputs TUI, JSON, Markdown (for LLMs), Graphviz.
+- **Best used for:** Finding *where* to refactor first; JSON/Markdown export into CI or an agent workflow.
+- **How to pull in:** Install the Rust CLI; run against a repo.
+
+### desloppify
+- **Link:** https://github.com/peteromallet/desloppify
+- **Type:** AI agent framework (Python 3.11+)
+- **What it is:** A scan → AI-review → triage → fix → rescan loop that turns "slop code" into engineered code. Mechanical detection (dead code, duplication, complexity) plus LLM review of naming/abstractions/module boundaries. State persists in `.desloppify/`. 29 languages, GitHub scorecard badges, CI health gates.
+- **Best used for:** Systematically upgrading a quickly-built codebase beyond what linting catches.
+- **How to pull in:** Python package; runs as an agent loop.
+
+### vibe-audit (interactive feature cleanup)
+- **Link:** https://mcpmarket.com/tools/skills/vibe-audit-interactive-feature-cleanup
+- **Type:** Agent skill
+- **What it is:** Interactive dead-code / abandoned-experiment / orphaned-file audit. Presents findings one-by-one with git-history context and lets you decide keep/deprecate/remove — safety-first, no auto-delete.
+- **Best used for:** Pruning experimental features and unused components after prototyping sprints.
+- **How to pull in:** Install the skill from MCP Market.
+
+### vibe code cleanup (andyfischer gist)
+- **Link:** https://gist.github.com/andyfischer/7e064cf1672e32377cfe224b91bda82a
+- **Type:** Skill / checklist (gist)
+- **What it is:** An 8-point cleanup guide for AI-generated code — move complex inline types to top level, un-inline imports, dedupe, drop unnecessary backwards-compat, remove journal-style / verbose comments.
+- **Best used for:** A quick pre-PR pass over code generated in a session.
+- **How to pull in:** Copy as a skill / reference checklist.
+
+### Vibecodex — vibe-coding-rules
+- **Link:** https://github.com/yerdaulet-damir/vibe-coding-rules
+- **Type:** Ruleset + reference apps (CLAUDE.md / .cursor/rules / .claude/skills)
+- **What it is:** 54 production architecture rules for AI-assisted coding across FastAPI (Python), Next.js 15 (TS), and Go 1.22+ — hexagonal architecture, idempotency, feature colocation, RSC, consumer-side interfaces, graceful shutdown. Ships pre-built config dirs agents auto-load, plus three working reference apps.
+- **Best used for:** Dropping guardrails into a project so the agent enforces production patterns every session (prevents 1400-line god files). Note: opinionated toward FastAPI/Next/Go — adapt for other stacks.
+- **How to pull in:** Copy the `CLAUDE.md` / `.cursor/rules` / `.claude/skills` into a project.
+
+### karpathy vibe-to-agentic
+- **Link:** https://github.com/LearnPrompt/andrej-karpathy-skills/blob/main/karpathy-vibe-to-agentic/SKILL.md
+- **Type:** Agent skill (from `andrej-karpathy-skills`)
+- **What it is:** A protocol for taking a working prototype to production: (1) audit for hidden assumptions/failure modes, (2) define GIVEN/WHEN/THEN success criteria, (3) incrementally clean up with the agent while the human keeps judgment. "Vibe coding raises the floor; agentic engineering raises the ceiling." Parent repo collects skills from Karpathy's posts.
+- **Best used for:** The moment a prototype "kind of works" and needs to become maintainable.
+- **How to pull in:** Install the skill from the repo.
+
+---
+
 ## Quick pick guide
 
 | Need | Reach for |
@@ -138,4 +186,10 @@ Last updated: 2026-09-24
 | De-slop AI writing | no-ai-slop |
 | De-slop AI visual/UI design | open-design — anti-ai-slop.md |
 | Branded HTML artifacts (no AI look) | visualize |
+| Find where the code debt is | debtmap |
+| Auto-clean code slop (agent loop) | desloppify |
+| Prune dead code / abandoned features | vibe-audit |
+| Quick pre-PR code cleanup pass | vibe code cleanup (andyfischer gist) |
+| Guardrails so the agent writes prod code | Vibecodex |
+| Take a prototype to production | karpathy vibe-to-agentic |
 | Discover more Claude skills | awesome-claude-skills, ui-skills.com, skills.sh, kail_designs lists |
