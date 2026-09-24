@@ -69,6 +69,13 @@ Last updated: 2026-09-24
 - **Best used for:** Giving coding agents production-quality UI judgment. (The `animate` / `animate-expo` / `mobile-native` skills in this stack are already installed globally.)
 - **How to pull in:** `npx skills@latest add emilkowalski/skills`.
 
+### visualize
+- **Link:** https://github.com/display-dev/visualize
+- **Type:** Agent skill (Claude Code, Cursor, Codex, OpenCode, etc.)
+- **What it is:** A skill for generating polished, **on-brand HTML artifacts** without the generic AI look. 35 templates (marketing, ops, technical, decision, long-form, data), 40 native design systems + 63 brand styles (Airbnb, Apple, Cohere, Mistral…). `/visualize teach` captures a project's brand into `DESIGN.md` + `PRODUCT.md`; iteration verbs (`polish`, `simplify`, `bolder`, `quieter`, `animate`, `review`); a deterministic slop/accessibility/perf detector.
+- **Best used for:** Any AI-generated HTML deliverable that must look branded and intentional — brochures, one-pagers, dashboards, reports (e.g. the Partner Summit HTML brochure, value-prop pages). Strong anti-slop story built in.
+- **How to pull in:** Install as an agent skill per the repo README.
+
 ---
 
 ## 4. Anti-AI-Slop (writing + design)
@@ -100,6 +107,21 @@ Last updated: 2026-09-24
 - **Best used for:** Discovering new skills to install, and as a reference when building custom skills. Check here first when hunting for a skill that solves a recurring task.
 - **How to pull in:** Browse the list; install linked skills per their own instructions.
 
+### Skill hubs — ui-skills.com & skills.sh
+- **Links:** https://ui-skills.com · https://skills.sh
+- **Type:** Skill marketplaces / directories
+- **What they are:** Two hubs that host installable UI/design/dev agent skills (the sources behind the kail_designs lists below).
+- **Best used for:** Browsing and installing individual UI-craft skills.
+
+### kail_designs — curated UI-skill lists (X threads)
+- **Links:** https://x.com/kail_designs/status/2102265246325047711 · https://x.com/kail_designs/status/2102687065720926651
+- **Type:** Curated skill lists (reference)
+- **What they are:** Two threads by @kail_designs recommending UI/design agent skills he uses regularly.
+  - **List 1 — "make your UI look better instantly":** frontend-design, apple-design, beautiful-shadows, accessibility, design-review, emil-design-eng, shadcn, adapt, better-interface, interaction-design (all on ui-skills.com).
+  - **List 2 — specific purposes:** web-design-guidelines (Vercel Labs), minimalist-ui, caveman (token-saving compressed mode), brandkit (brand-kit image gen), claude-handoff, critique (design critique), firecrawl-search, seo-audit, ai-seo (all on skills.sh).
+- **Best used for:** A shortlist of vetted UI/design/SEO skills to evaluate. Note overlap with what's already installed (apple-design / emil-design-eng ≈ emilkowalski/skills; shadcn; design-review).
+- **How to pull in:** Install individual skills from ui-skills.com / skills.sh as needed.
+
 ---
 
 ## Quick pick guide
@@ -115,4 +137,5 @@ Last updated: 2026-09-24
 | Give an agent UI taste | emilkowalski/skills |
 | De-slop AI writing | no-ai-slop |
 | De-slop AI visual/UI design | open-design — anti-ai-slop.md |
-| Discover more Claude skills | awesome-claude-skills |
+| Branded HTML artifacts (no AI look) | visualize |
+| Discover more Claude skills | awesome-claude-skills, ui-skills.com, skills.sh, kail_designs lists |
