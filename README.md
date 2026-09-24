@@ -71,14 +71,34 @@ Last updated: 2026-09-24
 
 ---
 
-## 4. Anti-AI-Slop (writing / copy)
+## 4. Anti-AI-Slop (writing + design)
 
 ### no-ai-slop
 - **Link:** https://github.com/petergyang/no-ai-slop
 - **Type:** Agent skill (ChatGPT / Claude Code)
+- **Slop type:** Writing / copy
 - **What it is:** Detects and removes 20+ AI writing patterns ("It's not X. It's Y.", "What nobody tells you is…", weasel attribution, corporate jargon) while preserving authentic voice. Edit mode, detect-only mode, and a satire generator. 24 distinct slop categories.
 - **Best used for:** Cleaning AI-assisted copy — decks, brochures, UI microcopy, emails — so it reads human. Pairs with the `stop-slop` / `no-ai-slop` writing skills.
 - **How to pull in:** `npx` install as a ChatGPT/Claude Code skill.
+
+### open-design — anti-ai-slop.md
+- **Link:** https://github.com/nexu-io/open-design/blob/main/craft/anti-ai-slop.md
+- **Type:** Design-standards doc (from `nexu-io/open-design`, 97.9k stars)
+- **Slop type:** Visual / UI design
+- **What it is:** A tiered, enforceable checklist for making UI look human-crafted, not template-AI. **P0 Cardinal Sins** (no default Tailwind indigo, no gradient hero, SVG icons not emoji, design-system fonts, no "AI dashboard tile" patterns, no unverified metrics, no filler copy), **P1 Soft Tells** (vary the Hero→Features→Pricing order, no placeholder-image CDNs, limit raw hex, cap accent usage), **P2 Polish Tells**. Guiding principle: ~80% proven patterns + ~20% distinctive choice.
+- **Best used for:** A pre-ship rubric for any landing page / dashboard UI to strip visual AI-slop. Complements the installed `unslop-ui` / `no-ai-slop` skills. Parent repo `nexu-io/open-design` is worth browsing as a broader design-standards reference.
+- **How to pull in:** Read the doc as a checklist, or feed it to an agent as design rules.
+
+---
+
+## 5. Skill Directories / Discovery
+
+### awesome-claude-skills
+- **Link:** https://github.com/travisvn/awesome-claude-skills
+- **Type:** Curated awesome-list (meta-resource)
+- **What it is:** A curated directory of Claude skills — official Anthropic skills (docs, design, dev, comms), community skills (browser automation, security testing, iOS, etc.), creation guides, best practices, and guidance on when to use Skills vs MCP / prompts / subagents.
+- **Best used for:** Discovering new skills to install, and as a reference when building custom skills. Check here first when hunting for a skill that solves a recurring task.
+- **How to pull in:** Browse the list; install linked skills per their own instructions.
 
 ---
 
@@ -94,3 +114,5 @@ Last updated: 2026-09-24
 | Loading spinners | loading-dev |
 | Give an agent UI taste | emilkowalski/skills |
 | De-slop AI writing | no-ai-slop |
+| De-slop AI visual/UI design | open-design — anti-ai-slop.md |
+| Discover more Claude skills | awesome-claude-skills |
