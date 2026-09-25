@@ -26,6 +26,13 @@ Last updated: 2026-09-24
 - **Best used for:** Projects already on shadcn/ui that want polished animation without swapping design systems.
 - **How to pull in:** npm install / component docs site (drop-in per component).
 
+### Theatre.js
+- **Link:** https://www.theatrejs.com/
+- **Type:** JS animation library (open source, 7.7k+ stars)
+- **What it is:** A professional motion library — "create in code, perfect in the browser." Sequence editor, graph editor, dope sheet, easing presets. Works with THREE.js, React Three Fiber, HTML/CSS/SVG, WebGPU; drives JS variables so you own the render.
+- **Best used for:** Cinematic / keyframed animation and 3D scene choreography beyond what CSS transitions cover — landing-page hero moments, scroll storytelling. Heavier than transitions.dev; reach for it only when the motion is the point.
+- **How to pull in:** `npm install @theatre/core @theatre/studio`.
+
 ---
 
 ## 2. UI Component Libraries
@@ -71,6 +78,13 @@ Last updated: 2026-09-24
 - **What it is:** A collection of beautiful animated theme (light/dark) toggle icons.
 - **Best used for:** Dropping a polished dark-mode toggle into any app instead of a plain switch.
 - **How to pull in:** Copy the snippet.
+
+### 21st.dev
+- **Link:** https://21st.dev/
+- **Type:** Component registry (React/Tailwind/TS, 12,000+ components)
+- **What it is:** A community registry of hand-crafted React components, page templates, and shadcn themes. Registry model — code is copied into your project (you own it). Install via shadcn CLI, or paste a prompt so an agent (Cursor/Claude/v0) rebuilds it in your codebase.
+- **Best used for:** Designed-from-scratch heroes, pricing tables, and full page templates — agent-ready. Free tier limits daily copies. Complements React Bits / KokonutUI.
+- **How to pull in:** shadcn CLI, or agent prompt from the component page.
 
 ---
 
@@ -225,6 +239,60 @@ De-slopping *code* (not copy or visuals) and keeping AI-assisted codebases maint
 
 ---
 
+## 8. 3D & Interactive Web Graphics
+
+Heavier creative tools for standout visuals — landing pages and marketing surfaces, not internal tools.
+
+### Spline
+- **Link:** https://spline.design/
+- **Type:** Browser-based 3D design tool
+- **What it is:** Create interactive 2D/3D scenes (animation, physics, particles) with AI-assisted and manual tools. Exports to web (HTML/JS, React, Next.js), iOS, Android; integrates with Webflow, Framer, Wix.
+- **Best used for:** 3D hero scenes, animated brand objects, gamified marketing moments. Watch bundle weight on real pages.
+- **How to pull in:** Design in the app, embed via its React/JS component or exported asset.
+
+### Unicorn Studio
+- **Link:** https://unicorn.studio/
+- **Type:** Interactive-graphics tool ("craft interactive graphics that ship")
+- **What it is:** Build dynamic, interactive visual effects for the web without hand-coding shaders/canvas work; export to embed on live pages.
+- **Best used for:** Eye-catching animated backgrounds and interactive hero effects on marketing sites.
+- **How to pull in:** Create in-app, embed the generated snippet.
+
+### paper.design
+- **Link:** https://paper.design/
+- **Type:** Design-to-code canvas (MCP / agent-connected)
+- **What it is:** A "connected canvas for teams shipping with agents" — designs export as HTML/CSS and agents sync changes back, bidirectionally. Works with real data (not lorem), connects to IDEs/CLI/agents over MCP. Used by Vercel, Perplexity, Tailwind Labs, PostHog.
+- **Best used for:** Closing the design→code gap on web-standards projects where an agent does the boilerplate. Strong fit given the agent-first workflow across these projects.
+- **How to pull in:** Design in Paper, connect via MCP to the coding agent.
+
+---
+
+## 9. Design Assets & Inspiration
+
+Non-code resources — fonts, galleries, portfolio media.
+
+### bestfreefonts.com
+- **Link:** https://bestfreefonts.com/
+- **Type:** Font directory
+- **What it is:** A curated selection of ~214 free fonts organized by category (sans, serif, display, script, mono).
+- **Best used for:** Sourcing a typeface fast without licensing hassle. Confirm each font's license before commercial use.
+- **How to pull in:** Download from the listing.
+
+### Inspora
+- **Link:** https://inspora.design/
+- **Type:** Design-inspiration gallery
+- **What it is:** Curated design work across Web, Branding, Product, Motion, Illustration, 3D, Print.
+- **Best used for:** Reference and direction-setting before designing a new UI or brand surface.
+- **How to pull in:** Browse.
+
+### Reelfolio
+- **Link:** https://reelfolio.io/
+- **Type:** Showreel generator (paid)
+- **What it is:** Turns screenshots / screen recordings into polished animated showreels — 200+ motion templates, multiple aspect ratios, 1080p/4K export, commercial rights.
+- **Best used for:** Portfolio, social, and client-presentation reels of a shipped product without video-editing work.
+- **How to pull in:** Upload assets in-app; ~$108/yr for watermark-free export.
+
+---
+
 ## Quick pick guide
 
 | Need | Reach for |
@@ -250,4 +318,12 @@ De-slopping *code* (not copy or visuals) and keeping AI-assisted codebases maint
 | Dark-mode toggle icon | toggles.dev |
 | Stop agent shipping UI slop | uizze.sh |
 | iOS App Store listing (ASO) | before-skills |
+| Registry of agent-ready components | 21st.dev |
+| Code-driven cinematic / 3D animation | Theatre.js |
+| 3D hero scene | Spline |
+| Interactive animated background | Unicorn Studio |
+| Design→code with an agent (MCP) | paper.design |
+| Free fonts | bestfreefonts.com |
+| Design inspiration | Inspora |
+| Turn screenshots into a showreel | Reelfolio |
 | Discover more Claude skills | awesome-claude-skills, ui-skills.com, skills.sh, kail_designs / csaba_kissi / DevDsgn lists |
